@@ -1,0 +1,87 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model CRUD_opr.Models.Edit
+
+<style>
+    form {
+        background-color: #d7d1d6;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        width: 50%;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        text-align: left;
+        margin-left: 100px;
+        font-weight: bold;
+    }
+
+    input {
+        width: 250px;
+        margin-bottom: 15px;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+
+    button {
+        background: #7c706d;
+        border: 1px solid #7c706d;
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 16px;
+        min-height: 40px;
+        outline: 0;
+        padding: 8px 10px;
+        text-align: center;
+        text-rendering: geometricprecision;
+        text-transform: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+        margin-left: 5px;
+    }
+
+</style>
+
+<h1>Edit</h1>
+
+
+@if (Model is null)
+{
+    <p>No Student </p>
+}
+else
+{
+<form method="post">
+    <label>Name :</label>
+    <input type="text" asp-for="Name" /><br />
+    <label>Email :</label>
+    <input type="text" asp-for="Email" /><br />
+    <label>Phone No:</label>
+    <input type="text" asp-for="Phone" /><br />
+    <button>Submit</button>
+</form>
+}
+

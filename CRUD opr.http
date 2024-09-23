@@ -1,0 +1,41 @@
+﻿@CRUD opr_HostAddress = https://localhost:7087
+
+//read
+GET {{CRUD opr_HostAddress}}/api/studentapi
+
+###
+
+
+// Add student
+POST {{CRUD opr_HostAddress}}/api/studentapi
+Content-Type: application/json
+
+{
+  //AddStudentModel
+}
+
+###
+
+//edit
+
+PUT {{CRUD opr_HostAddress}}/api/studentapi/{id:guid}
+Content-Type: application/json
+
+{
+  //Guid
+}
+
+###
+
+//delete
+
+PUT {{CRUD opr_HostAddress}}/api/studentapi/{id:guid}
+Content-Type: application/json
+
+{
+  //Guid
+}
+
+###
+
+
